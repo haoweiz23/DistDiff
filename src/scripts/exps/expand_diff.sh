@@ -1,18 +1,19 @@
 #!/bin/bash
 
-DATASET=$1
 RHO=0.1
 SCALE=50
 STRENGTH=0.9        # 1.0 corresponds to full destruction of information in init image, default 0.9
 EXPAND_NUM=5
+INTERVAL=10000
+DATASET=$1
 START=$2
 END=$3
 CON=$4             # constraint_value
-INTERVAL=$5
-K=$6
-GPU=$7
-SPLIT=$8
-DATA_SAVE_PATH=data/${DATASET}_expansion/distdiff_K${K}_CON_${CON}_start_${START}_end_${END}_interval_${INTERVAL}_batch_${EXPAND_NUM}x
+K=$5
+GPU=$6
+SPLIT=$7
+
+DATA_SAVE_PATH=data/${DATASET}_expansion/distdiff_K${K}_CON_${CON}_start_${START}_end_${END}_batch_${EXPAND_NUM}x
 CUDA_VISIBLE_DEVICES=${GPU} python3  data_expand.py \
         -a CLIP-VIT-B32   -d ${DATASET} \
         --data_dir data  \
