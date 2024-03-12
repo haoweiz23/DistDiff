@@ -2,8 +2,8 @@
 
 for DATASET in caltech-101
 do
-  START=32
-  END=30
+  START=30                  # optimizing [START, END) steps
+  END=29
   sh scripts/exps/expand_diff.sh ${DATASET} ${START} ${END} 0.8 3 1 0 &
   sh scripts/exps/expand_diff.sh ${DATASET} ${START} ${END} 0.8 3 2 1 &
   sh scripts/exps/expand_diff.sh ${DATASET} ${START} ${END} 0.8 3 3 2 &

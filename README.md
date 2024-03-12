@@ -1,5 +1,5 @@
 # Distribution-Aware Data Expansion with Diffusion Models
-This is the official repository of  [Distribution-Aware Data Expansion with Diffusion Models (DistDiff)]().
+This is the official repository of  [Distribution-Aware Data Expansion with Diffusion Models (DistDiff)](https://arxiv.org/abs/2403.06741).
 
 <hr />
 
@@ -25,7 +25,7 @@ This is the official repository of  [Distribution-Aware Data Expansion with Diff
   <img src="figure/overview.jpg"  style="height:400px; max-width:100%;" />
 </p>
 
-Please refer to the [paper](https://) for more technical details.
+Please refer to the [paper](https://arxiv.org/abs/2403.06741) for more technical details.
 
 <hr />
 
@@ -66,7 +66,14 @@ sh single_exp.sh
 If you find our work inspiring in your research, please cite our work.
 
 ```
-@article
+@misc{zhu2024distributionaware,
+      title={Distribution-Aware Data Expansion with Diffusion Models}, 
+      author={Haowei Zhu and Ling Yang and Jun-Hai Yong and Wentao Zhang and Bin Wang},
+      year={2024},
+      eprint={2403.06741},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
 
 <hr />
