@@ -36,7 +36,14 @@ Please follow the instructions detailed in [INSTALL.md](INSTALL.md) to install n
 <hr />
 
 ### 4.2 Run Experiments
-**1) Data Expansion**
+**1) Hierarchical Prototypes Construction**
+* First, you need to construct hierarchical prototypes by:
+```
+python extract_prototypes.py -a CLIP-VIT-B32 -d ${DATASET}
+```
+* The generated results will be saved in `data/prototypes/`.
+  
+**2) Data Expansion**
 * We utilize 4 distinct GPUs to execute the entire program. This is achieved by modifying CUDA_VISIBLE_DEVICES=N and setting --split N for each GPU, where N ranges from 0 to 3.
 ```
 cd src/
@@ -47,7 +54,7 @@ sh scripts/exps/expand_diff.sh ${DATASET} ${START} ${END} 0.8 ${K} 3 3
 ```
 * Please note that if your system doesn't possess 4 GPUs, you can modify the `total_split` parameter in `scripts/exps/expand_diff.sh` to reflect the actual number of GPUs you have, and make corresponding adjustments to the `SPLIT` and `GPU`.
 
-**2) Training and Evaluation**
+**3) Training and Evaluation**
 * After data expansion, use the following script to train and evaluate the backbone on the expanded datasets.
 
 ```
