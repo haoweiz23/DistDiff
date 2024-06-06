@@ -6,43 +6,42 @@ This codebase is tested on Ubuntu 20.04.2 LTS with python 3.10. Follow the below
 
 ## Required libraries
 
+
+* Create the environment
+```bash
+conda create env -n distdiff python=3.10.6 -y
+conda activate distdiff
+```
+
+
 * Install necessary python libraries:
 
 ```
-pip install opencv-python numpy scipy matplotlib pillow pandas scikit-image medmnist timm ftfy regex tqdm x-transformers fairscale transformers einops_exts accelerate torchmetrics torch-fidelity sympy transformers==4.19.2 diffusers invisible-watermark omegaconf tensorboard taming-transformers-rom1504 pytorch_lightning kornia 
+pip install numpy scipy matplotlib scikit-image medmnist timm regex tqdm accelerate transformers==4.19.2
 ```
 
 * Install CLIP:
 
 ```
-pip install git+https://github.com/openai/CLIP.git
+pip install open_clip_torch
 ```
 
-* Install stable diffusion:
-
-```
-git clone https://github.com/CompVis/stable-diffusion
-cd stable-diffusion
+* Install diffuser:
+```bash
+git clone https://github.com/huggingface/diffusers
+cd diffusers
 pip install -e .
-cd ../
 ```
 
-## Model 
-* Download diffusion model  checkpoint: 
-
+* Install CutMix (optional)
 ```
-cd src/
-mkdir model
-cd model
-wget https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt
-mv sd-v1-4.ckpt stable_diffusion_v1-4.ckpt 
-cd ../ 
+pip install git+https://github.com/ildoonet/cutmix
 ```
 
 
 ## Datasets
 The instructions to prepare each dataset are detailed below. 
-All the datasets should be prepared in `./src/data/`. 
+All the datasets should be prepared in `./data/`. 
 
 Datasets list:
 - [Cifar100-Subset](#Cifar100-Subset)
