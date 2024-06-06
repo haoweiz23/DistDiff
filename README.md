@@ -94,8 +94,4 @@ If you find our work inspiring in your research, please cite our work.
 
 <hr />
 
-## Acknowledgments
-
-Our code is based on [GIF-SD](https://github.com/Vanint/DatasetExpansion) repository. We thank the authors for releasing their code. If you use our model and code, please consider citing these works as well.
-
 
