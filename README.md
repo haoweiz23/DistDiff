@@ -84,10 +84,12 @@ python parse_logs.py /path/to/exp --multi
 If you find our work inspiring in your research, please cite our work.
 
 ```
-@article{zhu2024distributionaware,
+@article{zhu2024distribution,
   title={Distribution-Aware Data Expansion with Diffusion Models},
-  author={Haowei Zhu and Ling Yang and Jun-Hai Yong and Wentao Zhang and Bin Wang},
-  journal={arXiv preprint arXiv:2403.06741},
+  author={Zhu, Haowei and Yang, Ling and Yong, Jun-Hai and Yin, Hongzhi and Jiang, Jiawei and Xiao, Meng and Zhang, Wentao and Wang, Bin},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={102768--102795},
   year={2024}
 }
 ```
