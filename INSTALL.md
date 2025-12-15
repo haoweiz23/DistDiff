@@ -9,7 +9,7 @@ This codebase is tested on Ubuntu 20.04.2 LTS with python 3.10. Follow the below
 
 * Create the environment
 ```bash
-conda create env -n distdiff python=3.10.6 -y
+conda create -n distdiff python=3.10.6 -y
 conda activate distdiff
 ```
 
